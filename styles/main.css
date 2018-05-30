@@ -453,6 +453,7 @@ h3 {
 
 
 	position:fixed;
+	width:100%;
 	top:0;
 	bottom:0;
 	left:0;
@@ -480,16 +481,16 @@ h3 {
 #loading{
 
 	position: relative;
-	width:50%;
+	width:100%;
 	margin: auto;
 	text-align: center;
 	
 }
 
-#loading svg{
+#loading img{
 
-	width:40%;
-	border-bottom: 5px solid gray;
+	width:400px
+	
 	
 	
 }
@@ -723,6 +724,24 @@ svg #astronaut_1_ {
 }
 
 @media screen and (max-width:900px) {
+
+	#bubble{
+
+		display: none;
+	}
+
+	svg text{
+
+		display: none;
+	}
+
+	#loading img{
+
+	width:200px
+	
+	
+	
+}
     #moonDesktop {
         display: none
     }
@@ -735,6 +754,11 @@ svg #astronaut_1_ {
     h2,
     h3 {
         font-size: 30px
+    }
+
+    i{
+
+    	font-size:22px;
     }
     #navbar {
         top: 0;
@@ -791,7 +815,7 @@ svg #astronaut_1_ {
         transform: none
     }
     #info {
-        padding: 3%
+        padding: 5%
     }
     #info .block,
     #info .block .left,
