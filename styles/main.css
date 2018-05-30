@@ -1,0 +1,784 @@
+.lb-loader,
+.lightbox {
+    text-align: center;
+    line-height: 0
+}
+
+.lb-dataContainer:after,
+.lb-outerContainer:after {
+    content: "";
+    clear: both
+}
+
+html.lb-disable-scrolling {
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 100vw
+}
+
+.lightboxOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #000;
+    filter: alpha(Opacity=80);
+    opacity: .8;
+    display: none
+}
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    font-weight: 400
+}
+
+.lightbox .lb-image {
+    display: block;
+    height: auto;
+    max-width: inherit;
+    max-height: none;
+    border-radius: 3px;
+    border: 4px solid #fff
+}
+
+.lightbox a img {
+    border: none
+}
+
+.lb-outerContainer {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 4px;
+    background-color: #fff
+}
+
+.lb-loader,
+.lb-nav {
+    position: absolute;
+    left: 0
+}
+
+.lb-outerContainer:after {
+    display: table
+}
+
+.lb-loader {
+    top: 43%;
+    height: 25%;
+    width: 100%
+}
+
+.lb-cancel {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: url(../images/loading.gif) no-repeat
+}
+
+.lb-nav {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10
+}
+
+.lb-container>.nav {
+    left: 0
+}
+
+.lb-nav a {
+    outline: 0;
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
+}
+
+.lb-next,
+.lb-prev {
+    height: 100%;
+    cursor: pointer;
+    display: block
+}
+
+.lb-nav a.lb-prev {
+    width: 34%;
+    left: 0;
+    float: left;
+    background: url(../images/prev.png) left 48% no-repeat;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s
+}
+
+.lb-nav a.lb-prev:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+.lb-nav a.lb-next {
+    width: 64%;
+    right: 0;
+    float: right;
+    background: url(../images/next.png) right 48% no-repeat;
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    -o-transition: opacity .6s;
+    transition: opacity .6s
+}
+
+.lb-nav a.lb-next:hover {
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+.lb-dataContainer {
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+.lb-dataContainer:after {
+    display: table
+}
+
+.lb-data {
+    padding: 0 4px;
+    color: #ccc
+}
+
+.lb-data .lb-details {
+    width: 85%;
+    float: left;
+    text-align: left;
+    line-height: 1.1em
+}
+
+.lb-data .lb-caption {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1em
+}
+
+.lb-data .lb-caption a {
+    color: #4ae
+}
+
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999
+}
+
+.lb-data .lb-close {
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(../images/close.png) 100% 0 no-repeat;
+    text-align: right;
+    outline: 0;
+    filter: alpha(Opacity=70);
+    opacity: .7;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s
+}
+
+.lb-data .lb-close:hover {
+    cursor: pointer;
+    filter: alpha(Opacity=100);
+    opacity: 1
+}
+
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+figcaption,
+figure,
+main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: inherit;
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+audio,
+video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details,
+menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+[hidden],
+template {
+    display: none
+}
+
+#heading {
+    font-size: 4vw
+}
+
+h1 {
+    font-weight: 900
+}
+
+h1,
+h3 {
+    line-height: 1em
+}
+
+
+
+#heading h2:first-child,
+h1,
+h3 {
+    font-family: Heebo, sans-serif;
+    color: #838484
+}
+
+#heading h2:first-child {
+    margin-bottom: -5px;
+    font-size: .5em
+}
+
+#heading h1 span {
+    color: #fefefe;
+    font-size: 1.1em
+}
+
+h3 {
+    font-size: 2.5vw
+}
+
+p {
+    color: gray
+}
+
+h2,
+p {
+    font-family: Slabo\ 27px, serif
+}
+
+h2 {
+    color: #fefefe;
+    font-weight: 100;
+    font-size: 2.5vw
+}
+
+h2 i,
+h2 span {
+    color: #8abfbe
+}
+
+html{
+
+	min-height:100%;
+}
+body {
+	height:100%;
+    background: 
+    radial-gradient( rgba(55,55,48,.5),rgba(13,13,12,.5)),url(../images/background.png);
+}
+
+a {
+    color: inherit
+}
+
+#moonMobile {
+    display: none
+}
+
+#navbar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    height: 100px;
+    width: 50px;
+    z-index: 5000;
+    color: #8abfbe;
+    transform: translateY(-50%)
+}
+
+#navbar div {
+    width: 100%;
+    position: absolute;
+    text-align: center
+}
+
+#navbar div ul {
+    padding: 0
+}
+
+#navbar div ul li {
+    margin-bottom: 15px;
+    list-style-type: none
+}
+
+@media screen and (min-width:901px) {
+    #hero {
+        position: relative;
+        width: inherit
+    }
+    #hero #imgContainer {
+        position: inherit;
+        width: 54%;
+        height: 100%;
+        display: inline-block
+    }
+    #hero #imgContainer svg {
+        width:100%;
+        height:auto;
+        position: relative
+    }
+    #hero #heading {
+        position: relative;
+        vertical-align: top;
+        width: 40%;
+        height: 100%;
+        margin-left: -2%;
+        display: inline-block;
+        z-index: 5;
+        padding: 25vh 0
+    }
+    #hero #heading h1 {
+        margin: 0
+    }
+    #hero #paralax {
+        position: absolute;
+        right: 2%;
+        bottom: -12%;
+        z-index: -5
+    }
+    #hero #paralax img {
+        width: 30vw
+    }
+}
+
+#info {
+    position: relative;
+    padding: 10% 0 0
+}
+
+#info .block {
+    margin: auto;
+    width: 80%;
+    display: block;
+    position: relative
+}
+
+#info .block:first-child {
+    margin-bottom: 5%
+}
+
+#info .block .left {
+    display: inline-block;
+    text-align: center;
+    width: 25%
+}
+
+#info .block .right {
+    vertical-align: top;
+    display: inline-block;
+    width: 68%
+}
+
+#info .block .right .box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 5%
+}
+
+#info .block .right .box .overlay {
+    padding: 2%;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 4px;
+    background: #fefefe;
+    background: #20211f;
+    text-align: right;
+    z-index: 5
+}
+
+#info .block .right .box .overlay h2 {
+    color: #262224;
+    color: #fefefe;
+    font-size: 30px
+}
+
+#info .block .right .box .overlay a {
+    color: #8abfbe;
+    font-size: 25px
+}
+
+#info .block .right .box img {
+    width: 100%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%)
+}
+
+@keyframes astroanim {
+    0% {
+
+    	 
+    	    
+        transform: rotate(0deg);
+    }
+    to {
+
+    	
+        transform: rotate(10deg);
+    }
+}
+
+svg #astronaut_1_ {
+
+	
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-name: astroanim;
+    animation-direction: alternate
+}
+
+@media screen and (min-width:3000px) {
+    .box .overlay h2 {
+        font-size: 400px
+    }
+}
+
+@media screen and (max-width:900px) {
+    #moonDesktop {
+        display: none
+    }
+    #moonMobile {
+        display: block
+    }
+    h1 {
+        font-size: 80px
+    }
+    h2,
+    h3 {
+        font-size: 30px
+    }
+    #navbar {
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        transform: none
+    }
+    #navbar ul li {
+        padding: 0 7%;
+        display: inline-block
+    }
+    #hero {
+        height: auto;
+        padding: 25vh 0 0;
+        width: 100vw;
+        background-size: cover;
+        background-position: 100%
+    }
+    #hero #paralax {
+        width: 200px;
+        margin: 15% auto 0
+    }
+    #imgContainer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 100vw
+    }
+    #imgContainer svg {
+        position: relative;
+        transform: none;
+        top: auto
+    }
+    #imgContainer svg #astronaut_1_ #astronaut {
+        transform: translateX(30%)
+    }
+    #imgContainer svg .star {
+        display: none
+    }
+    #heading {
+        position: relative;
+        height: auto;
+        vertical-align: middle;
+        width: 100%;
+        display: block;
+        margin: auto;
+        text-align: center
+    }
+    #heading div {
+        position: relative;
+        top: auto;
+        transform: none
+    }
+    #info {
+        padding: 3%
+    }
+    #info .block,
+    #info .block .left,
+    #info .block .right {
+        width: 100%
+    }
+    #info .block .right .box .overlay {
+        position: relative;
+        width: 100%;
+        display: block;
+        text-align: center
+    }
+}
+
+@media screen and (min-width:3000px) {
+    #navbar {
+        width: 80px
+    }
+    #navbar ul li a {
+        font-size: 40px;
+        right: 20px
+    }
+    #info .block .right .box .overlay h2,
+    #info .block .right .box .overlay h2 a {
+        font-size: 50px
+    }
+    #info .block .right .box .overlay p {
+        font-size: 40px
+    }
+}
+
+
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   svg {
+       display:none; 
+   }
+
+   #hero #imgContainer{
+     height:100vh !important;
+   	 background:url('../images/astronautback-01.svg');
+   }
+}
