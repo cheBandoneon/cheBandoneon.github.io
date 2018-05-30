@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lost in Space</title>
+    <title>portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo|Slabo+27px" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,900" rel="stylesheet">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -23,6 +23,18 @@
             </ul>
         </div>
     </div>
+
+
+    <div id="preloader"><div id='loading'>
+
+
+
+  <img src='images/spaceship-01.svg' height='300'>
+
+
+
+
+<h2>Loading</h2></div></div>
     <div id="hero">
         <div id="imgContainer">
 
@@ -428,13 +440,13 @@
                     <div class="overlay">
                         <h2>Ekkedro Website</h2>
                         <p>Website Design and Development for the architecture office <strong>Ekkedro</strong>. Although the website is built on wordpress, there is an extensive use of custom blocks of html and css.</p>
-                        <h2><a target="_blank" href="http://ekkedro.com">Visit Website</a></h2></div>
+                        <h2><a href="http://ekkedro.com">Visit Website</a></h2></div>
                 </div>
                 <div class="box"><img src="images/nikas.png">
                     <div class="overlay">
                         <h2>Dimitrios Nikas Website</h2>
                         <p>Mini Website Design and Development for the architect Dimitrios Nikas. The whole html and css are custom.  Yeoman gulp generator and Sass preprocessor were used.</p>
-                        <h2><a target="_blank" href="http://dimitriosnikas.com">Visit Website</a></h2></div>
+                        <h2><a href="http://dimitriosnikas.com">Visit Website</a></h2></div>
                 </div>
                 <div class="box"><img src="images/wegroove-01.png">
                     <div class="overlay">
@@ -486,6 +498,15 @@
 
     });
  
+
+
+    </script>
+
+    <script>
+
+        $(window).bind('load', function() { 
+  $('#preloader').addClass('hide'); 
+  });
 
 
     </script>
