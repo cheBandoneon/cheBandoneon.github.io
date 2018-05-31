@@ -481,9 +481,14 @@ h3 {
 
 #loading{
 
-	position: relative;
+	position: absolute;
 	width:100%;
-	margin: auto;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	-o-transform:translateY(-50%);
+	-ms-transform:translateY(-50%);
+	-moz-transform:translateY(-50%);
+	transform:translateY(-50%);
 	text-align: center;
 	
 }
@@ -589,7 +594,7 @@ a {
     list-style-type: none
 }
 
-@media screen and (min-width:901px) {
+@media screen and (min-width:1024px) and (orientation:landscape) {
     #hero {
         position: relative;
         width: inherit
@@ -724,7 +729,7 @@ svg #astronaut_1_ {
     }
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1023px),screen and (orientation:portrait) {
 
 	#bubble{
 
