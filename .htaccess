@@ -2,4 +2,4 @@
 Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
 
-redirect 301 /filename.html http://dimitriosnikas.com
+redirect 301 /index.html http://dimitriosnikas.com
